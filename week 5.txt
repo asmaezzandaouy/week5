@@ -1,0 +1,17 @@
+
+var categories = ["Lunch", "Dinner", "Sushi", "Drinks", "Desserts"];
+
+// Function to handle click on the "Specials" tile
+function handleSpecialsClick() {
+    // Generate a random index to select a category
+    var randomIndex = Math.floor(Math.random() * categories.length);
+    
+    // Get the random category
+    var randomCategory = categories[randomIndex];
+    
+    // Redirect the user to the random category page
+    window.location.href = "/menu/" + randomCategory.toLowerCase(); // Assuming category URLs follow this pattern
+}
+
+// Attach click event listener to the "Specials" tile
+document.getElementById("specials-tile").addEventListener("click", handleSpecialsClick);
